@@ -34,11 +34,15 @@
      }
      console.log('-------------------------------------------');
 // 6. Sukurti masyvą, kurio ilgis būtų nuo 20 iki 30, o reikšmės būtų skaičiai nuo 10 iki 30. Surasti didžiausią masyvo reikšmę, NENAUDOJANT sort() bei Math.max() funkcijų. (7 taškai)
-     const arr = [10, 15, 13, 25, 27, 14, 18, 29, 30, 11, 12, 15, 17, 24, 26, 16, 17, 27, 22, 21, 25, 26, 16, 12];
-       let biggestNum = arr[0];
-            for (let d = 0; d < arr.length; d++) {
-                if (arr[d] > biggestNum) {
-                    biggestNum = arr[d]
+let arr1 = [];
+ for (let m = 0; m <= 30; m++) {
+    arr1.push(Math.floor(Math.random() * 20) + 10)
+    }
+    console.log(arr1);
+       let biggestNum = arr1[0];
+            for (let d = 0; d < arr1.length; d++) {
+                if (arr1[d] > biggestNum) {
+                    biggestNum = arr1[d];
                 }
             }
             console.log(biggestNum);
@@ -98,7 +102,7 @@
             }
         }
 
-        console.log(lygineSuma([2, 4, 5], [2, 5, 6]));
+        console.log(lygineSuma([2, 4, 6], [42, 45, 67]));
         console.log('---------------------------------------');
 // 9. Parašyti funkciją pirminisSkaicius. Funkcija turi vieną kintamąjį. Turi būti patikrinimas, kad kintamasis yra skaičius. Funkcija turi grąžinti ar pateiktas skaičius yra pirminis( pirminis
 // skaičius yra tas, kuris dalinasi tik iš savęs ir tik iš vieneto be liekanos.) (10 taškų)
@@ -121,4 +125,5 @@
 console.log('-------------------------------------------');
 // 10. Parašyti funkciją telefonoNumeris. Funkcija turi priimti vieną kintamąjį - masyvą. Masyvo elementai - skaičiai, ilgis - 10. Funkcija turi grąžinti telefono numerį tokiu formatu - 
 // "(XXX) XXX-XXXX". (10 taškų)
+
 
