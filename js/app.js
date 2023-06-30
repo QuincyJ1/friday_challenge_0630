@@ -42,7 +42,33 @@
 
 // 7. Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 100. Suskaičiuokite kiek yra kiekvienos raidės. (7 taškai)
 
+        const array1 = [];
+        let a = 0;
+        let b = 0;
+        let c = 0;
+        let d = 0;
 
+        for (let l = 0; i < 100; i++) {
+            array1.push(Math.floor(Math.random() * 4));
+           
+        }
+    
+        for (let k = 0; k < array1.length; k++) {
+            if (array1[k] === 0) {
+                array1[k] = 'A'
+                a++
+            } else if (array1[k] === 1) {
+                array1[k] = 'B';
+                b++;
+            } else if (array1[k] === 2) {
+                array1[k] = 'C';
+                c++;
+            } else if (array1[k] === 3) {
+                array1[k] = 'D';
+                d++;
+        }
+    }
+        console.log(`A: ${a}, B: ${b}, C: ${c}, D: ${d}`);
 // 8. Parašyti funkciją - lygineSuma. Funkcijos parametrai - du kintamieji. Testų reikalavimai - abu kitamieji turi būti arba skaičiai arba masyvai(negali būti vienas skaičius, kitas masyvas).
 // Jei kintamieji skaičiai, grąžinti skaičių sumą, jei kintamieji masyvai - grąžinti masyvų ilgių sumą. Jei abu kintamieji skaičiai arba masyvai, bet suma nelyginė - grąžinti tekstą, kad suma nelyginė. (10 taškų)
 
@@ -67,7 +93,8 @@
             }
         }
 
-        console.log(lygineSuma([2, 4], [2, 5, 6]));
+        console.log(lygineSuma([2, 4, 5], [2, 5, 6]));
+        console.log('---------------------------------------');
 // 9. Parašyti funkciją pirminisSkaicius. Funkcija turi vieną kintamąjį. Turi būti patikrinimas, kad kintamasis yra skaičius. Funkcija turi grąžinti ar pateiktas skaičius yra pirminis( pirminis
 // skaičius yra tas, kuris dalinasi tik iš savęs ir tik iš vieneto be liekanos.) (10 taškų)
 
