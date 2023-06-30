@@ -17,11 +17,32 @@
      for (let j = 0; j <=10; j+=2) {
         console.log(j)
      }
+     console.log('-----------------------------------------');
 // 4. Naudojant for ciklą, sugeneruoti penkis atsitiktinius skaičius nuo 1 iki 10. Išvesti juos konsolėje. (5 taškai)
-     
+    
 // 5. Naudojant while ciklą, spausdinti atsitiktinius skaičius nuo 1 iki 10. Paskutinis atspausdintas skaičius turi būti 5. (7 taškai)
+     let i = 1;
+     while (i <= 10) {
+        console.log(i = Math.floor(Math.random() * 10) + 1);
+        if (i === 5) {
+            break;
+        }
+     }
+     console.log('-------------------------------------------');
 // 6. Sukurti masyvą, kurio ilgis būtų nuo 20 iki 30, o reikšmės būtų skaičiai nuo 10 iki 30. Surasti didžiausią masyvo reikšmę, NENAUDOJANT sort() bei Math.max() funkcijų. (7 taškai)
+     const arr = [10, 15, 13, 25, 27, 14, 18, 29, 30, 11, 12, 15, 17, 24, 26, 16, 17, 27, 22, 21, 25, 26, 16, 12];
+       let biggestNum = arr[0];
+            for (let d = 0; d < arr.length; d++) {
+                if (arr[d] > biggestNum) {
+                    biggestNum = arr[d]
+                }
+            }
+            console.log(biggestNum);
+       
+
 // 7. Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 100. Suskaičiuokite kiek yra kiekvienos raidės. (7 taškai)
+
+
 // 8. Parašyti funkciją - lygineSuma. Funkcijos parametrai - du kintamieji. Testų reikalavimai - abu kitamieji turi būti arba skaičiai arba masyvai(negali būti vienas skaičius, kitas masyvas).
 // Jei kintamieji skaičiai, grąžinti skaičių sumą, jei kintamieji masyvai - grąžinti masyvų ilgių sumą. Jei abu kintamieji skaičiai arba masyvai, bet suma nelyginė - grąžinti tekstą, kad suma nelyginė. (10 taškų)
 // 9. Parašyti funkciją pirminisSkaicius. Funkcija turi vieną kintamąjį. Turi būti patikrinimas, kad kintamasis yra skaičius. Funkcija turi grąžinti ar pateiktas skaičius yra pirminis( pirminis
