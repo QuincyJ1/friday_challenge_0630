@@ -58,9 +58,7 @@ let arr1 = [];
 
         for (let l = 0; i < 100; i++) {
             array1.push(Math.floor(Math.random() * 4));
-           
         }
-    
         for (let k = 0; k < array1.length; k++) {
             if (array1[k] === 0) {
                 array1[k] = 'A'
@@ -126,4 +124,20 @@ console.log('-------------------------------------------');
 // 10. Parašyti funkciją telefonoNumeris. Funkcija turi priimti vieną kintamąjį - masyvą. Masyvo elementai - skaičiai, ilgis - 10. Funkcija turi grąžinti telefono numerį tokiu formatu - 
 // "(XXX) XXX-XXXX". (10 taškų)
 
-
+function telephone(num) {
+    let telNum = '';
+    for (let q = 0; q < num.length; q++) {
+        if (typeof num[q] !== 'number' || !isFinite(num[q])) {
+            return `Error: Netinkamas tipas`
+        }else {
+            telNum += num[q];
+            if (telNum.length !== 10) {
+                return 'Numeri turi sudaryti 10 skaitmenu.'
+            }
+            const formatedNum = `(${telNum[0]}${telNum[1]}${telNum[2]}) ${telNum[3]}${telNum[4]}${telNum[5]}-${telNum[6]}${telNum[7]}${telNum[8]}${telNum[9]}`
+            return formatedNum;
+        }
+    }
+   return formatedNum;
+}
+console.log(telephone([1234567890]));
