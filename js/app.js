@@ -19,7 +19,11 @@
      }
      console.log('-----------------------------------------');
 // 4. Naudojant for ciklą, sugeneruoti penkis atsitiktinius skaičius nuo 1 iki 10. Išvesti juos konsolėje. (5 taškai)
-    
+     for (let u = 0; u < 5; u++) {
+        const randNum = Math.floor(Math.random() * 10) + 1;
+        console.log(`Random skaiciai: ${randNum}`);
+     }
+     console.log('--------------------------------------------');
 // 5. Naudojant while ciklą, spausdinti atsitiktinius skaičius nuo 1 iki 10. Paskutinis atspausdintas skaičius turi būti 5. (7 taškai)
      let i = 1;
      while (i <= 10) {
@@ -69,6 +73,7 @@
         }
     }
         console.log(`A: ${a}, B: ${b}, C: ${c}, D: ${d}`);
+        console.log('--------------------------------------');
 // 8. Parašyti funkciją - lygineSuma. Funkcijos parametrai - du kintamieji. Testų reikalavimai - abu kitamieji turi būti arba skaičiai arba masyvai(negali būti vienas skaičius, kitas masyvas).
 // Jei kintamieji skaičiai, grąžinti skaičių sumą, jei kintamieji masyvai - grąžinti masyvų ilgių sumą. Jei abu kintamieji skaičiai arba masyvai, bet suma nelyginė - grąžinti tekstą, kad suma nelyginė. (10 taškų)
 
@@ -113,6 +118,7 @@
         }
     }
     console.log(pirminisSkaicius(11));
-
+console.log('-------------------------------------------');
 // 10. Parašyti funkciją telefonoNumeris. Funkcija turi priimti vieną kintamąjį - masyvą. Masyvo elementai - skaičiai, ilgis - 10. Funkcija turi grąžinti telefono numerį tokiu formatu - 
 // "(XXX) XXX-XXXX". (10 taškų)
+
