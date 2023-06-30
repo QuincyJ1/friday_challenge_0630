@@ -38,7 +38,6 @@
                 }
             }
             console.log(biggestNum);
-       
             console.log('-----------------------------------');
 
 // 7. Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 100. Suskaičiuokite kiek yra kiekvienos raidės. (7 taškai)
@@ -46,6 +45,29 @@
 
 // 8. Parašyti funkciją - lygineSuma. Funkcijos parametrai - du kintamieji. Testų reikalavimai - abu kitamieji turi būti arba skaičiai arba masyvai(negali būti vienas skaičius, kitas masyvas).
 // Jei kintamieji skaičiai, grąžinti skaičių sumą, jei kintamieji masyvai - grąžinti masyvų ilgių sumą. Jei abu kintamieji skaičiai arba masyvai, bet suma nelyginė - grąžinti tekstą, kad suma nelyginė. (10 taškų)
+
+        function lygineSuma (num1, num2) {
+            let sum = 0;
+            if (typeof num1 === 'number' && typeof num2 === 'number') {
+                sum = num1 + num2
+                const sumOdd = `Suma yra: ${sum}. Skaicius nelyginis`
+                const sumEven = `Suma yra ${sum}. Skaicius lyginis`
+                if (sum % 2 !== 0) {
+                    return `${sumOdd}.`
+                } return sumEven
+            } else if (Array.isArray(num1) && Array.isArray(num2)) {
+                for (let b = 0; b < num1.length; b++) {
+                    sum = num1.length + num2.length;
+                    sumArrayOdd = `Masyvu ilgiu suma yra ${sum}. Skaicius nelyginis`;
+                    sumArrayEven = `Masyvu ilgiu suma yra ${sum}. Skaicius lyginis`;
+                }
+                if (sum % 2 !== 0) {
+                    return sumArrayOdd
+                } return sumArrayEven
+            }
+        }
+
+        console.log(lygineSuma([2, 4], [2, 5, 6]));
 // 9. Parašyti funkciją pirminisSkaicius. Funkcija turi vieną kintamąjį. Turi būti patikrinimas, kad kintamasis yra skaičius. Funkcija turi grąžinti ar pateiktas skaičius yra pirminis( pirminis
 // skaičius yra tas, kuris dalinasi tik iš savęs ir tik iš vieneto be liekanos.) (10 taškų)
 
