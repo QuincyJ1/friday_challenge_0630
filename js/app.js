@@ -39,6 +39,7 @@
             }
             console.log(biggestNum);
        
+            console.log('-----------------------------------');
 
 // 7. Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 100. Suskaičiuokite kiek yra kiekvienos raidės. (7 taškai)
 
@@ -47,5 +48,22 @@
 // Jei kintamieji skaičiai, grąžinti skaičių sumą, jei kintamieji masyvai - grąžinti masyvų ilgių sumą. Jei abu kintamieji skaičiai arba masyvai, bet suma nelyginė - grąžinti tekstą, kad suma nelyginė. (10 taškų)
 // 9. Parašyti funkciją pirminisSkaicius. Funkcija turi vieną kintamąjį. Turi būti patikrinimas, kad kintamasis yra skaičius. Funkcija turi grąžinti ar pateiktas skaičius yra pirminis( pirminis
 // skaičius yra tas, kuris dalinasi tik iš savęs ir tik iš vieneto be liekanos.) (10 taškų)
+
+    function pirminisSkaicius(a) {
+        if (typeof a !== 'number') {
+            return 'Reikia ivesti skaiciu'
+        } 
+        if (a % 2 === 0 && a > 2) {
+            return `${a} nera pirminis skaicius`
+        }   else if (a % 3 === 0 && a > 3) {
+            return `${a} nera pirminis skaicius`
+        } else if (a === 1) {
+            return '1 nera pirminis skaicius'
+        } else {
+            return `${a} yra pirminis skaicius`
+        }
+    }
+    console.log(pirminisSkaicius(11));
+
 // 10. Parašyti funkciją telefonoNumeris. Funkcija turi priimti vieną kintamąjį - masyvą. Masyvo elementai - skaičiai, ilgis - 10. Funkcija turi grąžinti telefono numerį tokiu formatu - 
 // "(XXX) XXX-XXXX". (10 taškų)
